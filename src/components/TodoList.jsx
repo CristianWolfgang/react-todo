@@ -4,9 +4,9 @@ const TodoContainer = styled.ul`
     width: 90%;
     margin:1rem auto 0;
     border: 2px solid black;
-    padding:1rem;
-    list-style-type:none;
-    
+    padding:2rem;
+
+    list-style-type: disclosure-closed;    
 `;
 import React from 'react'
 import TodoItem from "./TodoItem";

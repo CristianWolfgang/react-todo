@@ -9,7 +9,11 @@ function App() {
   [obj,setObj] = useState(null),
   [toDo,dispatchToDo] = useReducer(reducer,{}),
   handleInput = e=>setNumber(e.target.value),
-  handleClick =()=>(fetchInfo("http://www.boredapi.com/api/activity?participants="+number,setObj));
+  handleClick =()=>{
+    if(!isNaN(number) && number>0){
+      (fetchInfo("http://www.boredapi.com/api/activity?participants="+number,setObj))
+    }
+  };
   
   useEffect(()=>{
     if(obj){
